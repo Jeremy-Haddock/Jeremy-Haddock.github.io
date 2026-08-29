@@ -41,12 +41,6 @@
 
 /* header block */
 .mba-header{max-width:620px;}
-.mba-eyebrow{
-  font-size:12px;
-  letter-spacing:0.14em;
-  text-transform:uppercase;
-  color:var(--mba-quiet);
-}
 .mba-lead{
   font-size:clamp(20px, 2.4vw, 23px);
   line-height:1.55;
