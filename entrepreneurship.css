@@ -68,11 +68,11 @@
   gap:clamp(18px, 3vw, 28px);
   margin:clamp(40px, 6vw, 64px) 0 0;
   align-items:flex-start;
-  max-width:680px;
+  max-width:900px;
 }
 .mba-artifacts figure{
-  flex:1 1 260px;
-  min-width:230px;
+  flex:1 1 360px;
+  min-width:300px;
   margin:0;
 }
 .mba-mat{
