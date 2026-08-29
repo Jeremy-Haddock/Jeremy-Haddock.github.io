@@ -1,0 +1,194 @@
+/*
+  Design system for the entrepreneurship "evidence page", per the
+  Claude Design handoff. Deliberately separate from style.css: this
+  page has its own strict two-hue palette, its own type scale, and
+  explicitly no accent color, no radius, no shadows. Do not blend
+  these tokens into the rest of the site.
+*/
+.page.nav-shell{padding-bottom:0;}
+
+.mba{
+  --mba-bg:#f2ebe4;
+  --mba-mat:#fbf8f4;
+  --mba-ink:#2b2320;
+  --mba-body:#4a403a;
+  --mba-sub:#6b615a;
+  --mba-caption:#8a7d72;
+  --mba-quiet:#9a8b7e;
+  --mba-rule-top:#ddd2c6;
+  --mba-rule:#e5dbd0;
+  --mba-mat-border:#e2d8cd;
+  --mba-link:#c9b9a8;
+  --mba-font: -apple-system, "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
+
+  background:var(--mba-bg);
+  color:var(--mba-ink);
+  font-family:var(--mba-font);
+  padding:clamp(48px, 9vw, 112px) clamp(22px, 6vw, 80px) clamp(72px, 11vw, 140px);
+}
+.mba *{box-sizing:border-box;}
+.mba a{
+  color:var(--mba-ink);
+  text-decoration:none;
+  border-bottom:1px solid var(--mba-link);
+}
+.mba a:hover{
+  color:var(--mba-caption);
+  border-bottom-color:var(--mba-caption);
+}
+
+.mba-inner{max-width:1000px;margin:0 auto;}
+
+/* header block */
+.mba-header{max-width:620px;}
+.mba-eyebrow{
+  font-size:12px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--mba-quiet);
+}
+.mba-lead{
+  font-size:clamp(20px, 2.4vw, 23px);
+  line-height:1.55;
+  margin:22px 0 0;
+  text-wrap:pretty;
+}
+.mba-sub{
+  font-size:17px;
+  line-height:1.7;
+  margin:18px 0 0;
+  color:var(--mba-sub);
+  text-wrap:pretty;
+}
+
+/* 2022 artifact pair */
+.mba-artifacts{
+  display:flex;
+  flex-wrap:wrap;
+  gap:clamp(18px, 3vw, 28px);
+  margin:clamp(40px, 6vw, 64px) 0 0;
+  align-items:flex-start;
+  max-width:680px;
+}
+.mba-artifacts figure{
+  flex:1 1 260px;
+  min-width:230px;
+  margin:0;
+}
+.mba-mat{
+  background:var(--mba-mat);
+  border:1px solid var(--mba-mat-border);
+  padding:14px;
+  aspect-ratio:4 / 3;
+}
+.mba-mat img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+.mba-artifacts figcaption{
+  margin:10px 0 0;
+  font-size:13px;
+  line-height:1.55;
+  color:var(--mba-caption);
+}
+
+/* timeline */
+.mba-timeline{
+  margin:clamp(56px, 9vw, 104px) 0 0;
+  border-top:1px solid var(--mba-rule-top);
+}
+.mba-entry{
+  display:grid;
+  grid-template-columns:116px minmax(0, 1fr) auto;
+  gap:4px clamp(20px, 4vw, 44px);
+  align-items:start;
+  border-bottom:1px solid var(--mba-rule);
+  padding:clamp(26px, 4vw, 40px) 0;
+}
+.mba-entry-date{
+  font-size:13px;
+  line-height:1.5;
+  color:var(--mba-quiet);
+  padding-top:6px;
+}
+.mba-entry-text{min-width:0;max-width:52ch;}
+.mba-entry-text h3{
+  font-family:var(--mba-font);
+  font-size:clamp(19px, 2.2vw, 22px);
+  line-height:1.3;
+  margin:0 0 10px;
+  font-weight:500;
+  letter-spacing:-0.005em;
+}
+.mba-entry-text p{
+  font-size:17px;
+  line-height:1.72;
+  margin:0;
+  color:var(--mba-body);
+  max-width:50ch;
+  text-wrap:pretty;
+}
+.mba-postmortem{
+  margin:14px 0 0;
+  font-size:14px;
+  color:var(--mba-caption);
+}
+.mba-entry-media{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  align-items:flex-start;
+  justify-self:start;
+}
+.mba-entry-media figure{margin:0;}
+.mba-entry-media iframe{
+  display:block;
+  width:100%;
+  border:0;
+}
+.mba-entry-media .portrait{width:180px;aspect-ratio:9 / 16;}
+.mba-entry-media .landscape{width:300px;aspect-ratio:16 / 9;}
+.mba-entry-media figcaption{
+  margin:8px 0 0;
+  font-size:12px;
+  line-height:1.45;
+  color:var(--mba-quiet);
+  letter-spacing:0.02em;
+}
+
+/* postscript */
+.mba-postscript{
+  display:flex;
+  flex-wrap:wrap;
+  gap:4px clamp(20px, 4vw, 52px);
+  align-items:flex-start;
+  padding:clamp(40px, 6vw, 72px) 0 0;
+}
+.mba-postscript-date{
+  flex:0 0 116px;
+  font-size:13px;
+  line-height:1.5;
+  color:var(--mba-quiet);
+  padding-top:8px;
+}
+.mba-postscript-text{flex:1 1 380px;min-width:0;max-width:54ch;}
+.mba-postscript-text p:first-child{
+  font-size:clamp(20px, 2.4vw, 23px);
+  line-height:1.55;
+  margin:0 0 20px;
+  text-wrap:pretty;
+}
+.mba-postscript-text p:last-child{
+  font-size:17px;
+  line-height:1.72;
+  margin:0;
+  color:var(--mba-body);
+  text-wrap:pretty;
+}
+
+@media (max-width:720px){
+  .mba-entry{grid-template-columns:1fr;}
+  .mba-entry > *{grid-column:1;}
+}
