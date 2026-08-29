@@ -61,20 +61,7 @@
   text-wrap:pretty;
 }
 
-/* 2022 artifact pair */
-.mba-artifacts{
-  display:flex;
-  flex-wrap:wrap;
-  gap:clamp(18px, 3vw, 28px);
-  margin:clamp(40px, 6vw, 64px) 0 0;
-  align-items:flex-start;
-  max-width:900px;
-}
-.mba-artifacts figure{
-  flex:1 1 360px;
-  min-width:300px;
-  margin:0;
-}
+/* 2022 artifacts — matted, kept visually distinct from the unframed videos below */
 .mba-mat{
   background:var(--mba-mat);
   border:1px solid var(--mba-mat-border);
@@ -87,7 +74,12 @@
   height:100%;
   object-fit:contain;
 }
-.mba-artifacts figcaption{
+.mba-entry-media--artifacts{gap:clamp(14px, 3vw, 20px);}
+.mba-artifact-figure{
+  width:220px;
+  margin:0;
+}
+.mba-artifact-figure figcaption{
   margin:10px 0 0;
   font-size:13px;
   line-height:1.55;
