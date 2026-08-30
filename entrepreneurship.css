@@ -148,6 +148,29 @@
   font-size:14px;
   color:var(--mba-caption);
 }
+
+/* pull quote, lifted from the 2024 declaration itself */
+.mba-quote{
+  margin:20px 0 0;
+  padding:0 0 0 18px;
+  border-left:1px solid var(--mba-rule-top);
+  max-width:50ch;
+}
+.mba-quote p{
+  margin:0;
+  font-size:16px;
+  line-height:1.6;
+  font-style:italic;
+  color:var(--mba-sub);
+  text-wrap:pretty;
+}
+.mba-quote cite{
+  display:block;
+  margin-top:8px;
+  font-size:13px;
+  font-style:normal;
+  color:var(--mba-quiet);
+}
 .mba-entry-media{
   display:flex;
   flex-wrap:wrap;
