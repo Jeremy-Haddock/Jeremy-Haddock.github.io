@@ -72,6 +72,7 @@
 .mba-entry--stacked-media .mba-entry-media{
   grid-column:2;
   margin-top:1.75rem;
+  justify-self:stretch;
 }
 .mba-entry-media--artifacts{
   gap:clamp(18px, 3vw, 28px);
@@ -145,6 +146,11 @@
 }
 .mba-entry-media .portrait{width:180px;aspect-ratio:9 / 16;}
 .mba-entry-media .landscape{width:300px;aspect-ratio:16 / 9;}
+.mba-landscape-figure{
+  width:100%;
+  max-width:680px;
+}
+.mba-landscape-figure .landscape{width:100%;}
 .mba-entry-media figcaption{
   margin:8px 0 0;
   font-size:12px;
