@@ -1,39 +1,27 @@
+/*
+  One palette for the whole site, taken from the self-driven MBA page
+  (see entrepreneurship.css). Warm beige, two hues, no accent color.
+  Deliberately single-theme: the MBA page commits to this beige in every
+  context, so the rest of the site does too rather than flipping to a dark
+  theme the MBA page would not follow.
+*/
 :root{
-  --bg:#F1EBE2;
-  --card:#FAF6EF;
-  --ink:#332B22;
-  --muted:#8A7F6E;
-  --accent:#4F7C74;
-  --accent-soft:#DDE7E3;
-  --blue:#3E6A96;
-  --hair:#E3D9C8;
-  --sans: -apple-system, "Avenir Next", "Century Gothic", "Segoe UI", sans-serif;
+  --bg:#f2ebe4;
+  --card:#fbf8f4;
+  --ink:#2b2320;
+  --body:#4a403a;
+  --muted:#6b615a;
+  --caption:#8a7d72;
+  --quiet:#9a8b7e;
+  --hair:#e5dbd0;
+  --rule-top:#ddd2c6;
+  --mat-border:#e2d8cd;
+  --link-underline:#c9b9a8;
+  --sans: -apple-system, "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
   --serif: Georgia, "Iowan Old Style", serif;
 }
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --bg:#221E19;
-    --card:#2A241D;
-    --ink:#F0E9DC;
-    --muted:#A79A85;
-    --accent:#7FB0A6;
-    --accent-soft:#26332F;
-    --blue:#7FB2E0;
-    --hair:#3A3226;
-  }
-}
-:root[data-theme="dark"]{
-  --bg:#221E19;
-  --card:#2A241D;
-  --ink:#F0E9DC;
-  --muted:#A79A85;
-  --accent:#7FB0A6;
-  --accent-soft:#26332F;
-  --blue:#7FB2E0;
-  --hair:#3A3226;
-}
 *{box-sizing:border-box;}
-html{color-scheme:light dark;}
+html{color-scheme:light;}
 body{
   margin:0;
   background:var(--bg);
@@ -68,8 +56,8 @@ nav.top .links a{
 }
 nav.top .links a:hover,
 nav.top .links a[aria-current="page"]{
-  color:var(--accent);
-  border-color:var(--accent);
+  color:var(--ink);
+  border-color:var(--link-underline);
 }
 
 /* home page hero */
@@ -87,16 +75,16 @@ nav.top .links a[aria-current="page"]{
   width:196px;
   height:196px;
   border-radius:20px;
-  background:var(--accent-soft);
-  color:var(--accent);
+  background:var(--card);
+  color:var(--quiet);
   display:flex;
   align-items:center;
   justify-content:center;
   font-family:var(--serif);
   font-size:2.6rem;
   overflow:hidden;
-  border:1px solid var(--hair);
-  box-shadow:0 8px 24px -12px rgba(0,0,0,0.35);
+  border:1px solid var(--mat-border);
+  box-shadow:0 8px 24px -14px rgba(43,35,32,0.28);
 }
 .avatar img{
   width:100%;
@@ -113,7 +101,7 @@ nav.top .links a[aria-current="page"]{
   margin:-1rem 0 0;
   font-family:var(--serif);
   font-style:italic;
-  color:var(--accent);
+  color:var(--caption);
   font-size:1.05rem;
 }
 .hero p{
@@ -129,7 +117,7 @@ nav.top .links a[aria-current="page"]{
   color:var(--muted);
 }
 .hero-contact a{text-decoration:none;color:var(--muted);}
-.hero-contact a:hover{color:var(--accent);}
+.hero-contact a:hover{color:var(--ink);}
 
 /* inner page content */
 .content{padding:3rem 0;}
@@ -161,8 +149,8 @@ nav.top .links a[aria-current="page"]{
   border-bottom:1px solid transparent;
 }
 .link-stack a:hover{
-  color:var(--accent);
-  border-color:var(--accent);
+  color:var(--ink);
+  border-color:var(--link-underline);
 }
 
 .group{margin-bottom:2.5rem;}
@@ -172,12 +160,12 @@ nav.top .links a[aria-current="page"]{
   font-weight:400;
   font-size:1.2rem;
   margin:0 0 1rem;
-  color:var(--blue);
+  color:var(--ink);
 }
 
 .resume-card{
   background:var(--card);
-  border:1px solid var(--hair);
+  border:1px solid var(--mat-border);
   border-radius:14px;
   padding:1.5rem 1.75rem;
   display:flex;
@@ -186,8 +174,8 @@ nav.top .links a[aria-current="page"]{
   text-decoration:none;
   color:var(--ink);
 }
-.resume-card:hover{border-color:var(--accent);}
-.resume-card .go{color:var(--accent);font-weight:600;font-size:0.9rem;}
+.resume-card:hover{border-color:var(--quiet);}
+.resume-card .go{color:var(--caption);font-weight:600;font-size:0.9rem;}
 
 footer{
   padding-top:2.5rem;
@@ -201,4 +189,4 @@ footer{
   gap:0.75rem;
 }
 footer a{color:var(--muted);text-decoration:none;}
-footer a:hover{color:var(--accent);}
+footer a:hover{color:var(--ink);}

@@ -74,12 +74,18 @@
   margin-top:1.75rem;
   justify-self:stretch;
 }
-.mba-entry-media--artifacts{
-  gap:clamp(22px, 3vw, 32px);
-  max-width:600px;
+/* the artifact pair spans the full measure, including the date gutter, so the
+   two exhibits can sit side by side as large as the page margins allow */
+.mba-entry--stacked-media .mba-entry-media--artifacts{
+  grid-column:1 / -1;
+}
+/* specificity bumped so this wins over the generic .mba-entry-media gap below */
+.mba-entry-media.mba-entry-media--artifacts{
+  gap:clamp(18px, 3vw, 28px);
+  max-width:none;
 }
 .mba-artifact-figure{
-  flex:1 1 100%;
+  flex:1 1 300px;
   min-width:0;
   margin:0;
 }
