@@ -47,13 +47,6 @@
   margin:22px 0 0;
   text-wrap:pretty;
 }
-.mba-sub{
-  font-size:17px;
-  line-height:1.7;
-  margin:18px 0 0;
-  color:var(--mba-sub);
-  text-wrap:pretty;
-}
 
 /* 2022 artifacts — matted, kept visually distinct from the unframed videos below */
 .mba-mat{
