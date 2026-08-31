@@ -47,6 +47,14 @@
   margin:22px 0 0;
   text-wrap:pretty;
 }
+/* second half of the intro, stepped down so the opening is not a wall of large type */
+.mba-lead-cont{
+  font-size:17px;
+  line-height:1.7;
+  margin:18px 0 0;
+  color:var(--mba-body);
+  text-wrap:pretty;
+}
 
 /* 2022 artifacts — matted, kept visually distinct from the unframed videos below */
 .mba-mat{
