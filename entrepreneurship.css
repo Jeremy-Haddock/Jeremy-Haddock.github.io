@@ -74,15 +74,14 @@
   margin-top:1.75rem;
   justify-self:stretch;
 }
-/* the artifact pair spans the full measure, including the date gutter, so the
-   two exhibits can sit side by side as large as the page margins allow */
-.mba-entry--stacked-media .mba-entry-media--artifacts{
-  grid-column:1 / -1;
-}
-/* specificity bumped so this wins over the generic .mba-entry-media gap below */
-.mba-entry-media.mba-entry-media--artifacts{
+/* the artifact pair sits above the timeline, across the full measure, so the
+   two exhibits can be side by side as large as the page margins allow */
+.mba-artifacts{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:flex-start;
   gap:clamp(18px, 3vw, 28px);
-  max-width:none;
+  margin:clamp(40px, 6vw, 64px) 0 0;
 }
 .mba-artifact-figure{
   flex:1 1 300px;
