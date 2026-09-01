@@ -17,11 +17,15 @@
   --rule-top:#ddd2c6;
   --mat-border:#e2d8cd;
   --link-underline:#c9b9a8;
+  --img-radius:6px;
   --sans: -apple-system, "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
   --serif: Georgia, "Iowan Old Style", serif;
 }
 *{box-sizing:border-box;}
 html{color-scheme:light;}
+
+/* slight corner rounding on every image, site-wide, including any added later */
+img{border-radius:var(--img-radius);}
 body{
   margin:0;
   background:var(--bg);

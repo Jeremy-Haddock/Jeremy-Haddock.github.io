@@ -62,6 +62,8 @@
   border:1px solid var(--mba-mat-border);
   padding:14px;
   aspect-ratio:4 / 3;
+  /* a touch wider than the image's own radius so the frame follows it */
+  border-radius:calc(var(--img-radius) + 3px);
 }
 .mba-mat img{
   display:block;
@@ -281,6 +283,7 @@ body.mba-lightbox-open{overflow:hidden;}
   border:1px solid var(--mba-mat-border);
   padding:clamp(8px, 1.5vw, 18px);
   object-fit:contain;
+  border-radius:calc(var(--img-radius) + 3px);
 }
 .mba-lightbox-figure figcaption{
   margin:0;
