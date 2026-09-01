@@ -241,9 +241,30 @@
   text-wrap:pretty;
 }
 
+/* Below ~900px there isn't room for a readable text measure beside the assets,
+   so the assets drop under the text the way the landscape videos already do. */
+@media (max-width:900px){
+  .mba-entry{grid-template-columns:116px minmax(0, 1fr);}
+  .mba-entry .mba-entry-media{
+    grid-column:2;
+    margin-top:1.75rem;
+  }
+}
+
 @media (max-width:720px){
   .mba-entry{grid-template-columns:1fr;}
   .mba-entry > *{grid-column:1;}
+  /* must match the specificity of the 900px rule above, or the media stays in
+     column 2 and grid creates an implicit second column */
+  .mba-entry .mba-entry-media{grid-column:1;}
+  /* give the assets real presence once they are full width */
+  .mba-entry-media{align-items:stretch;justify-self:stretch;}
+  .mba-entry-media .portrait{width:min(260px, 72vw);}
+  .mba-entry-media .photo{width:100%;max-width:340px;}
+  .mba-entry-media .landscape{width:100%;}
+  .mba-landscape-figure{max-width:none;}
+  /* the artifact pair stacks rather than squeezing two per row */
+  .mba-artifact-figure{flex:1 1 100%;}
 }
 
 /* click-to-enlarge (see entrepreneurship.js) */
