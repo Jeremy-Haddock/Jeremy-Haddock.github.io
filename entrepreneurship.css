@@ -173,10 +173,11 @@
   font-style:normal;
   color:var(--mba-quiet);
 }
+/* assets sit in the third column, to the right of the text, stacked vertically */
 .mba-entry-media{
   display:flex;
-  flex-wrap:wrap;
-  gap:10px;
+  flex-direction:column;
+  gap:22px;
   align-items:flex-start;
   justify-self:start;
 }
