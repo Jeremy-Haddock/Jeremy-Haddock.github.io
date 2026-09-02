@@ -1,5 +1,5 @@
 /*
-  Design system for the entrepreneurship "evidence page", per the
+  Design system for the self-driven MBA "evidence page", per the
   Claude Design handoff. Deliberately separate from style.css: this
   page has its own strict two-hue palette, its own type scale, and
   explicitly no accent color, no radius, no shadows. Do not blend
@@ -273,7 +273,7 @@
   .mba-artifact-figure{flex:1 1 100%;}
 }
 
-/* click-to-enlarge (see entrepreneurship.js) */
+/* click-to-enlarge (see self-driven-mba.js) */
 .mba-zoomable{cursor:zoom-in;}
 .mba-zoomable:focus-visible{
   outline:2px solid var(--mba-caption);
