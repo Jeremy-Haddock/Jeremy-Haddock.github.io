@@ -19,6 +19,7 @@
   --mba-rule:#e5dbd0;
   --mba-mat-border:#e2d8cd;
   --mba-link:#c9b9a8;
+  --mba-asset-w:240px;
   --mba-font: -apple-system, "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
 
   background:var(--mba-bg);
@@ -105,7 +106,9 @@
 }
 .mba-entry{
   display:grid;
-  grid-template-columns:116px minmax(0, 1fr) auto;
+  /* the asset column is a fixed width, not auto: an auto track is sized by each
+     entry's own captions, which made the assets shift left and right down the page */
+  grid-template-columns:116px minmax(0, 1fr) var(--mba-asset-w);
   gap:4px clamp(20px, 4vw, 44px);
   align-items:start;
   border-bottom:1px solid var(--mba-rule);
@@ -173,21 +176,23 @@
   font-style:normal;
   color:var(--mba-quiet);
 }
-/* assets sit in the third column, to the right of the text, stacked vertically */
+/* assets sit in the third column, to the right of the text, stacked vertically
+   and filling the column so every asset shares one left and right edge */
 .mba-entry-media{
   display:flex;
   flex-direction:column;
   gap:22px;
-  align-items:flex-start;
-  justify-self:start;
+  align-items:stretch;
+  justify-self:stretch;
 }
+.mba-entry-media > figure{width:100%;}
 .mba-entry-media figure{margin:0;}
 .mba-entry-media iframe{
   display:block;
   width:100%;
   border:0;
 }
-.mba-entry-media .portrait{width:180px;aspect-ratio:9 / 16;}
+.mba-entry-media .portrait{width:100%;aspect-ratio:9 / 16;}
 /* still photographs, sized to sit alongside the portrait video embeds */
 .mba-photo-figure{margin:0;width:240px;}
 .mba-entry-media .photo{
@@ -259,8 +264,9 @@
   .mba-entry .mba-entry-media{grid-column:1;}
   /* give the assets real presence once they are full width */
   .mba-entry-media{align-items:stretch;justify-self:stretch;}
-  .mba-entry-media .portrait{width:min(260px, 72vw);}
-  .mba-entry-media .photo{width:100%;max-width:340px;}
+  /* one shared width so stacked assets line up on both edges here too */
+  .mba-entry-media .portrait,
+  .mba-entry-media .photo{width:min(280px, 78vw);max-width:none;}
   .mba-entry-media .landscape{width:100%;}
   .mba-landscape-figure{max-width:none;}
   /* the artifact pair stacks rather than squeezing two per row */
