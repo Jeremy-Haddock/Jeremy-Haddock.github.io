@@ -120,17 +120,6 @@
   color:var(--mba-quiet);
   padding-top:6px;
 }
-/* quiet marker in the date gutter, for a turning point in the story */
-.mba-marker{
-  display:block;
-  margin-top:10px;
-  padding-top:9px;
-  border-top:1px solid var(--mba-rule);
-  font-size:11.5px;
-  line-height:1.45;
-  color:var(--mba-quiet);
-}
-
 .mba-entry-text{min-width:0;max-width:52ch;}
 .mba-entry-text h3{
   font-family:var(--mba-font);
